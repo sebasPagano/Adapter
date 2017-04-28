@@ -22,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
         personas.add(new Persona("Sebastian2","Pagano2"));
         personas.add(new Persona("Sebastian3","Pagano3"));
         personas.add(new Persona("Sebastian4","Pagano4"));
+        personas.add(new Persona("Sebastian","Pagano"));
+        personas.add(new Persona("Sebastian2","Pagano2"));
+        personas.add(new Persona("Sebastian3","Pagano3"));
+        personas.add(new Persona("Sebastian4","Pagano4"));
 
         RecyclerView.LayoutManager lm = new LinearLayoutManager(this); //de que manera va a presentar la informacion
         RV.setLayoutManager(lm);
