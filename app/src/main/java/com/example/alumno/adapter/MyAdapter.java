@@ -1,6 +1,7 @@
 package com.example.alumno.adapter;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,8 +24,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder > {
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layout,parent,true);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layout,parent,false);
         MyViewHolder vh = new MyViewHolder(v);
+        Log.d("Adapter","onCreate");
+
         return vh;
     }
 
@@ -33,11 +36,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder > {
 
         Persona p =personas.get(position);
         holder.setNombreApellido(p.getNombre(),p.getApellido());
+        Log.d("Adapter","Bind");
 
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        Log.d("Adapter","ItemCount");
+        return this.personas.size();
+
     }
 }

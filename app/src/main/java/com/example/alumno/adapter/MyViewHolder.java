@@ -17,10 +17,10 @@ public class MyViewHolder extends RecyclerView.ViewHolder {
     }
     public void setNombreApellido(String nombre,String Apellido)
     {
-        TextView txNombre = (TextView) itemView.findViewById(R.id.Nombre);
-        TextView txApellido= (TextView) itemView.findViewById(R.id.apellido);
+        TextView txNombre = (TextView) itemView.findViewById(R.id.TvNombre);
+        TextView txApellido = (TextView) itemView.findViewById(R.id.TvApellido);
         txNombre.setText(nombre);
-        txNombre.setText(Apellido);
+        txApellido.setText(Apellido);
     }
 
 }
